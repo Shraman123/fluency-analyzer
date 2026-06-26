@@ -1,0 +1,40 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html,
+body {
+  max-width: 100vw;
+  overflow-x: hidden;
+}
+
+body {
+  background: #0f0f11;
+  color: #f0f0f0;
+  font-family: "Inter", system-ui, sans-serif;
+}
+
+@keyframes pulse-ring {
+  0% { transform: scale(1); opacity: 0.8; }
+  50% { transform: scale(1.08); opacity: 0.4; }
+  100% { transform: scale(1); opacity: 0.8; }
+}
+
+.pulse-ring {
+  animation: pulse-ring 1.5s ease-in-out infinite;
+}
+
+@keyframes bar-dance {
+  0%, 100% { transform: scaleY(0.3); }
+  50% { transform: scaleY(1); }
+}
+
+.bar-animate {
+  animation: bar-dance 0.8s ease-in-out infinite;
+}
